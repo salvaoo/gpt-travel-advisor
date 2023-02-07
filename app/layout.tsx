@@ -1,5 +1,10 @@
+import { Roboto_Mono } from '@next/font/google'
 import './globals.css'
-import { AnalyticsWrapper } from './components/analytics';
+import { AnalyticsWrapper } from '@components/analytics';
+
+const RobotoMono = Roboto_Mono({
+  subsets: ['latin']
+})
 
 export default function RootLayout({
   children,
@@ -13,7 +18,7 @@ export default function RootLayout({
         head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
       */}
       <head />
-      <body>
+      <body className={RobotoMono.className}>
         {children}
         <AnalyticsWrapper />
       </body>

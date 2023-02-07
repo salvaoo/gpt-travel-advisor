@@ -1,4 +1,6 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto+Mono:400,500");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
   background-color: #230041;
@@ -49,8 +51,6 @@ li {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  font-family: "Roboto Mono", Helvetica, sans-serif;
-
 }
 
 p {

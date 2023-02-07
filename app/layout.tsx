@@ -1,10 +1,12 @@
 import { Roboto_Mono } from '@next/font/google'
 import './globals.css'
 import { AnalyticsWrapper } from '@components/analytics';
+import Image from 'next/image'
 
 const RobotoMono = Roboto_Mono({
   subsets: ['latin']
 })
+
 
 export default function RootLayout({
   children,
@@ -19,8 +21,18 @@ export default function RootLayout({
       */}
       <head />
       <body className={RobotoMono.className}>
-        {children}
-        <AnalyticsWrapper />
+        <div className="wrapper">
+          {children}
+          <AnalyticsWrapper />
+        </div>
+        <footer className="footer">
+           <a target="_blank" rel="no-opener" href="https://github.com/dabit3/gpt-travel-advisor">
+           <Image style={{ marginTop: '2px'}} alt="code available on github" width="18" height="18" src="/github.svg" />
+           </a>
+            <p>
+            Built with 🫶 by <a target="_blank" rel="no-opener" href="https://twitter.com/dabit3">@dabit3</a> <a className="sponsor" target="_blank" rel="no-opener" href="https://github.com/dabit3/gpt-travel-advisor">🫡 Sponsor this project</a>
+            </p>
+        </footer>
       </body>
     </html>
   )
